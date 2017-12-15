@@ -2,7 +2,7 @@
 grails:
     profile: web
     codegen:
-        defaultPackage: qfep
+        defaultPackage: qotd
     spring:
         transactionManagement:
             proxies: false
@@ -89,12 +89,12 @@ endpoints:
 hibernate:
     cache:
         queries: false
-        use_second_level_cache: false
+        use_second_level_cache: true
         use_query_cache: false
 dataSource:
     pooled: true
     jmxExport: true
-    driverClassName: com.mysql.jdbs.Driver
+    driverClassName: com.mysql.jdbc.Driver
     username: testman
     password: 'ye'
 
@@ -102,7 +102,7 @@ environments:
     development:
         dataSource:
             dbCreate: update
-            url: jdbc:mysql://localhost:3306/qfed?useSSL=false
+            url: jdbc:mysql://localhost:3306/qfep?useSSL=false
     test:
         dataSource:
             dbCreate: update
