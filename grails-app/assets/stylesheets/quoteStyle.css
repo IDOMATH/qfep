@@ -25,6 +25,11 @@
   width: 30%;
 }
 
+#header
+{
+  background: url(../images/background.jpg) repeat-x;
+}
+
 .topnav
 {
   overflow: hidden;

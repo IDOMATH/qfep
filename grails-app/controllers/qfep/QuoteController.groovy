@@ -26,4 +26,9 @@ class QuoteController
       p(randomQuote.author)
     }
   }
+
+  def renderView()
+  {
+    render (view:'renderView')
+  }
 }
