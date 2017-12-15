@@ -3,12 +3,27 @@ package qfep
 class QuoteController
 {
   static defaultAction = 'random'
-    def random()
-    {
-      def staticAuthor = "Math"
-      def staticContent = "yes."
 
-      //Pass information to the view
-      [author: staticAuthor, content: staticContent]
+  static scaffold = Quote
+
+  def quoteService
+
+  def random =
+  {
+    //Get a random quote
+    def randomQuote = quoteService.getRandomQuote()
+
+    //Pass information to the view
+    [quote: randomQuote]
+  }
+
+  def ajaxRandom()
+  {
+    def randomQuote = quoteService.getRandomQuote()
+    render
+    {
+      q(randomQuote.content)
+      p(randomQuote.author)
     }
+  }
 }
