@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Random Quote</title>
+    <title>Donate</title>
     <g:javascript library="jquery" />
   </head>
 
@@ -15,11 +15,7 @@
     </div>
 
     <div id="quote">
-      <%--Evaluates content reference (takes whatever is called content and puts it in the page) --%>
-      <q>${quote.content}</q>
-      <br />
-      <%--Evaluates author reference (takes whatever is called author and puts it in the page)  --%>
-      <p>-${quote.author}</p>
+      <g:img dir="images" file="donate.jpg" alt="donate" />
 
       <div id="mainContent">
         <p>This is mainContent</p>

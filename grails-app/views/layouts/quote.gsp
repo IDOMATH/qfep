@@ -13,10 +13,16 @@
 
   <body>
     <div id="header">
-      <g:img dir="images" file="logo.jpg" alt="logo"/>
+      <g:img dir="images" file="logo.jpg" alt="logo" />
     </div>
 
-    <%--Pulls content from targer page --%>
+    <div class="topnav">
+      <g:remoteLink action="random">Home</g:remoteLink>
+      <g:remoteLink action="ajaxRandom" update="middle">More Quote</g:remoteLink>
+      <g:remoteLink action="donate">Donate</g:remoteLink>
+    </div>
+
+    <%--Pulls content from target page --%>
     <g:layoutBody />
   </body>
 

@@ -27,8 +27,16 @@ class QuoteController
     }
   }
 
-  def renderView()
+  def renderString()
   {
-    render (view:'renderView')
+    render
+    {
+      p('i love lamp')
+    }
+  }
+
+  def donate =
+  {
+    
   }
 }
