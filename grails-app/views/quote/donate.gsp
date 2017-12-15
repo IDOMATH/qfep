@@ -6,20 +6,14 @@
 
   <body>
 
-    <div id="header">
-      <g:remoteLink action="renderString" update="mainContent">Render String</g:remoteLink>
-    </div>
-
     <div id="side">
       <p>Placeholding</p>
     </div>
 
-    <div id="quote">
+    <div id="middle">
       <g:img dir="images" file="donate.jpg" alt="donate" />
 
-      <div id="mainContent">
-        <p>This is mainContent</p>
-      </div>
+      <p>13iWuN9pt3dcBA5tTdfJ99ApFm1yd8jEGT</p>
 
     </div>
 

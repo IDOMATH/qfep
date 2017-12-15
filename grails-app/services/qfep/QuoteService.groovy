@@ -5,6 +5,23 @@ import grails.gorm.transactions.Transactional
 @Transactional
 class QuoteService
 {
+  //Select * from Quote;
+  //Stores it in allQuotes and returns it
+  def getQuoteList()
+  {
+    def allQuotes = Quote.list()
+    return allQuotes
+  }
+
+
+
+  def getTotalQuotes()
+  {
+    def allQuotes = getQuoteList()
+    return allQuotes.size()
+  }
+
+
 
     def getStaticQuote()
     {
@@ -12,10 +29,12 @@ class QuoteService
       return new Quote(author: 'Anonymous', content: 'Better late than never, but never late is better.')
     }
 
+
+
     def getRandomQuote()
     {
       //Takes all of the quotes and slaps them in an array.
-      def allQuotes = Quote.list()
+      def allQuotes = getQuoteList()
       def randomQuote = null
 
       //If database is populated grab a quote from it

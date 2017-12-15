@@ -18,7 +18,7 @@
 
     <div class="topnav">
       <g:remoteLink action="random">Home</g:remoteLink>
-      <g:remoteLink action="ajaxRandom" update="middle">More Quote</g:remoteLink>
+      <g:link action="index">Admin</g:link>
       <g:remoteLink action="donate">Donate</g:remoteLink>
     </div>
 

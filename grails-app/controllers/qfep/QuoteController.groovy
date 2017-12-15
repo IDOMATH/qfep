@@ -12,9 +12,10 @@ class QuoteController
   {
     //Get a random quote
     def randomQuote = quoteService.getRandomQuote()
-
+    //Get the count of Quote
+    def totalQuotes = quoteService.getTotalQuotes()
     //Pass information to the view
-    [quote: randomQuote]
+    [quote: randomQuote, totalQuotes: totalQuotes]
   }
 
   def ajaxRandom()
@@ -27,16 +28,9 @@ class QuoteController
     }
   }
 
-  def renderString()
-  {
-    render
-    {
-      p('i love lamp')
-    }
-  }
 
   def donate =
   {
-    
+
   }
 }
